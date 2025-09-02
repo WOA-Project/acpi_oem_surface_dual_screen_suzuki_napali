@@ -1,0 +1,391 @@
+
+
+
+
+
+
+
+
+Scope(\_SB_.PEP0)
+{
+
+    Method(EWMD)
+    {
+        Return(WBRC)
+    }
+
+    Name(WBRC,
+    Package()
+    {
+
+        Package()
+        {
+            "DEVICE",
+            "\\_SB.AMSS.QWLN",
+
+            Package()
+            {
+                "COMPONENT",
+                0x0,
+
+                Package()
+                {
+                    "FSTATE",
+                    0x0,
+                },
+            },
+
+            Package()
+            {
+                "DSTATE",
+                0x0,
+
+                package()
+                {
+                    "PMICVREGVOTE",
+                    package()
+                    {
+                        "PPP_RESOURCE_ID_SMPS7_A",
+                        2,
+                        1028000,
+                        1,
+                        6,
+                        0,
+                    },
+                },
+                package()
+                {
+                    "PMICVREGVOTE",
+                    package()
+                    {
+                        "PPP_RESOURCE_ID_LDO5_A",
+                        1,
+                        800000,
+                        1,
+                        7,
+                        0,
+                    },
+                },
+            },
+            Package()
+            {
+                "DSTATE",
+                0x2,
+
+                Package()
+                {
+                    "PMICVREGVOTE",
+                    package()
+                    {
+                        "PPP_RESOURCE_ID_LDO5_A",
+                        1,
+                        0,
+                        0,
+                        5,
+                        0,
+                    },
+                },
+                package()
+                {
+                    "PMICVREGVOTE",
+                    package()
+                    {
+                        "PPP_RESOURCE_ID_SMPS7_A",
+                        2,
+                        0,
+                        0,
+                        5,
+                        0,
+                    },
+                },
+            },
+            Package()
+            {
+                "DSTATE",
+                0x3,
+
+                Package()
+                {
+                    "PMICVREGVOTE",
+                    package()
+                    {
+                        "PPP_RESOURCE_ID_LDO5_A",
+                        1,
+                        0,
+                        0,
+                        5,
+                        0,
+                    },
+                },
+                package()
+                {
+                    "PMICVREGVOTE",
+                    package()
+                    {
+                        "PPP_RESOURCE_ID_SMPS7_A",
+                        2,
+                        0,
+                        0,
+                        5,
+                        0,
+                    },
+                },
+            },
+
+            package()
+            {
+              "ABANDON_DSTATE",
+              2
+            },
+        },
+
+
+
+        Package()
+        {
+            "DEVICE",
+            "\\_SB.COEX",
+            Package()
+            {
+                "COMPONENT",
+                0x0,
+                Package()
+                {
+                    "FSTATE",
+                    0x0,
+                },
+
+                Package()
+                {
+                    "PSTATE",
+                    0x0,
+
+					package()
+					{
+						"PMICVREGVOTE",
+						package()
+						{
+							"PPP_RESOURCE_ID_SMPS7_A",
+							2,
+							1028000,
+							1,
+							6,
+							0,
+						},
+					},
+
+                    package()
+                    {
+                        "PMICVREGVOTE",
+                        package()
+                        {
+                            "PPP_RESOURCE_ID_LDO5_A",
+                            1,
+                            800000,
+                            1,
+                            7,
+                            0,
+                        },
+                    },
+                },
+                Package()
+                {
+                    "PSTATE",
+                    0x1,
+
+                    Package()
+                    {
+                        "PMICVREGVOTE",
+                        package()
+                        {
+                            "PPP_RESOURCE_ID_LDO5_A",
+                            1,
+                            0,
+                            0,
+                            5,
+                            0,
+                        },
+                    },
+					package()
+					{
+						"PMICVREGVOTE",
+						package()
+						{
+							"PPP_RESOURCE_ID_SMPS7_A",
+							2,
+							0,
+							0,
+							5,
+							0,
+						},
+					},
+                },
+            },
+        },
+
+
+
+        Package()
+        {
+            "DEVICE",
+            "\\_SB.BTH0",
+            Package()
+            {
+                "COMPONENT",
+                0x0,
+                Package()
+                {
+                    "FSTATE",
+                    0x0,
+                },
+            },
+            Package()
+            {
+                "DSTATE",
+                0x0,
+
+                package()
+                {
+                    "PMICVREGVOTE",
+                    package()
+                    {
+                        "PPP_RESOURCE_ID_SMPS3_A",
+                        2,
+                        1352000,
+                        1,
+                        6,
+                        0,
+                    },
+                },
+                package()
+                {
+                    "PMICVREGVOTE",
+                    package()
+                    {
+                        "PPP_RESOURCE_ID_SMPS5_A",
+                        2,
+                        2040000,
+                        1,
+                        6,
+                        0,
+                    },
+                },
+                Package()
+                {
+                    "PMICVREGVOTE",
+                    package()
+                    {
+                        "PPP_RESOURCE_ID_LDO7_A",
+                        1,
+                        1800000,
+                        1,
+                        5,
+                        0,
+                    },
+                },
+                Package()
+                {
+                    "PMICVREGVOTE",
+                    package()
+                    {
+                        "PPP_RESOURCE_ID_LDO17_A",
+                        1,
+                        1304000,
+                        1,
+                        5,
+                        0,
+                    },
+                },
+                Package()
+                {
+                    "PMICVREGVOTE",
+                    package()
+                    {
+                        "PPP_RESOURCE_ID_LDO25_A",
+                        1,
+                        3104000,
+                        1,
+                        5,
+                        0,
+                    },
+                },
+            },
+            Package()
+            {
+                "DSTATE",
+                0x3,
+
+                Package()
+                {
+                    "PMICVREGVOTE",
+                    package()
+                    {
+                        "PPP_RESOURCE_ID_LDO7_A",
+                        1,
+                        0,
+                        0,
+                        5,
+                        0,
+                    },
+                },
+                Package()
+                {
+                    "PMICVREGVOTE",
+                    package()
+                    {
+                        "PPP_RESOURCE_ID_LDO17_A",
+                        1,
+                        0,
+                        0,
+                        5,
+                        0,
+                    },
+                },
+                Package()
+                {
+                    "PMICVREGVOTE",
+                    package()
+                    {
+                        "PPP_RESOURCE_ID_LDO25_A",
+                        1,
+                        0,
+                        0,
+                        5,
+                        0,
+                    },
+                },
+                package()
+                {
+                    "PMICVREGVOTE",
+                    package()
+                    {
+                        "PPP_RESOURCE_ID_SMPS3_A",
+                        2,
+                        0,
+                        0,
+                        5,
+                        0,
+                    },
+                },
+                package()
+                {
+                    "PMICVREGVOTE",
+                    package()
+                    {
+                        "PPP_RESOURCE_ID_SMPS5_A",
+                        2,
+                        0,
+                        0,
+                        5,
+                        0,
+                    },
+                },
+            },
+        },
+
+
+
+
+
+    })
+}
