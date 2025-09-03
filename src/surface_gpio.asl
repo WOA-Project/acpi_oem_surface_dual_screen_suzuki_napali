@@ -1,6 +1,6 @@
-
-
-
+//
+// Nxp GpioExpander
+//
 Device (GIOE)
 {
     Name (_HID, "PCAL6408")

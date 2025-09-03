@@ -1,6 +1,6 @@
-
-
-
+//
+// Temperature Sensor Interface for Fuel Gauge (R2)
+//
 Scope (\_SB.IC12)
 {
     Name (FGTS, ResourceTemplate ()
@@ -12,17 +12,17 @@ Scope (\_SB.IC12)
 
     Field (ORFG, BufferAcc, NoLock, Preserve)
     {
-        Connection (FGTS),
-        AccessAs (BufferAcc, AttribWord),
-        Offset (0x28),
+        Connection (FGTS), 
+        AccessAs (BufferAcc, AttribWord), 
+        Offset (0x28), 
         TMP1,   8
     }
 
     Field (ORFG, BufferAcc, NoLock, Preserve)
     {
-        Connection (FGTS),
-        AccessAs (BufferAcc, AttribWord),
-        Offset (0x06),
+        Connection (FGTS), 
+        AccessAs (BufferAcc, AttribWord), 
+        Offset (0x06), 
         TMP2,   8
     }
 
@@ -37,9 +37,9 @@ Scope (\_SB.IC12)
     }
 }
 
-
-
-
+//
+// Temperature Sensor Interface for Fuel Gauge (C3)
+//
 Scope (\_SB.IC11)
 {
     Name (FGTS, ResourceTemplate ()
@@ -51,26 +51,26 @@ Scope (\_SB.IC11)
 
     Field (ORFG, BufferAcc, NoLock, Preserve)
     {
-        Connection (FGTS),
-        AccessAs (BufferAcc, AttribWord),
-        Offset (0x28),
+        Connection (FGTS), 
+        AccessAs (BufferAcc, AttribWord), 
+        Offset (0x28), 
         TMP1,   8
     }
 
     Field (ORFG, BufferAcc, NoLock, Preserve)
     {
-        Connection (FGTS),
-        AccessAs (BufferAcc, AttribWord),
-        Offset (0x06),
+        Connection (FGTS), 
+        AccessAs (BufferAcc, AttribWord), 
+        Offset (0x06), 
         TMP2,   8
     }
 }
 
 Scope (\_SB)
 {
-
-
-
+    //
+    // Thermal Zone for Fuel Gauge (R2) Internal
+    //
     ThermalZone (FG1I)
     {
         Name (_DEP, Package ()
@@ -99,9 +99,9 @@ Scope (\_SB)
         }
     }
 
-
-
-
+    //
+    // Thermal Zone for Fuel Gauge (R2) External
+    //
     ThermalZone (FG1E)
     {
         Name (_DEP, Package ()
@@ -130,9 +130,9 @@ Scope (\_SB)
         }
     }
 
-
-
-
+    //
+    // Thermal Zone for Fuel Gauge (C3) Internal
+    //
     ThermalZone (FG2I)
     {
         Name (_DEP, Package ()
@@ -161,9 +161,9 @@ Scope (\_SB)
         }
     }
 
-
-
-
+    //
+    // Thermal Zone for Fuel Gauge (C3) External
+    //
     ThermalZone (FG2E)
     {
         Name (_DEP, Package ()

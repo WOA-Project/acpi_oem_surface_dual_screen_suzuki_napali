@@ -1,6 +1,6 @@
-
-
-
+//
+// Qualcomm ADC Temperature Monitor Device 1 (SYS_THERM1)
+//
 ThermalZone (AMX1)
 {
     Name (_HID, "QCOM0299")
@@ -20,9 +20,9 @@ ThermalZone (AMX1)
     }
 }
 
-
-
-
+//
+// Qualcomm ADC Temperature Monitor Device 2 (SYS_THERM2)
+//
 ThermalZone (AMX2)
 {
     Name (_HID, "QCOM029A")
@@ -42,9 +42,9 @@ ThermalZone (AMX2)
     }
 }
 
-
-
-
+//
+// Qualcomm ADC Temperature Monitor Device 3 (PA_THERM)
+//
 ThermalZone (AMX3)
 {
     Name (_HID, "QCOM029B")
@@ -55,9 +55,9 @@ ThermalZone (AMX3)
     }
 }
 
-
-
-
+//
+// Qualcomm ADC Temperature Monitor Device 4 (PA_THERM1)
+//
 ThermalZone (AMX4)
 {
     Name (_HID, "QCOM029C")
@@ -68,9 +68,9 @@ ThermalZone (AMX4)
     }
 }
 
-
-
-
+//
+// Qualcomm ADC Temperature Monitor Device 5 (SYS_THERM3)
+//
 ThermalZone (AMX5)
 {
     Name (_HID, "QCOM029D")
@@ -90,9 +90,9 @@ ThermalZone (AMX5)
     }
 }
 
-
-
-
+//
+// Qualcomm ADC Temperature Monitor Device 6 (PMIC_THERM)
+//
 ThermalZone (PMOD)
 {
     Name (_HID, "QCOM029E")
@@ -103,9 +103,9 @@ ThermalZone (PMOD)
     }
 }
 
-
-
-
+//
+// Qualcomm ADC Temperature Monitor Device 8 (PMIC_TEMP2)
+//
 ThermalZone (PMI1)
 {
     Name (_HID, "QCOM02A0")
@@ -117,9 +117,9 @@ ThermalZone (PMI1)
     }
 }
 
-
-
-
+//
+// Qualcomm ADC Temperature Monitor Device 9 (CHG_TEMP)
+//
 ThermalZone (PMI2)
 {
     Name (_HID, "QCOM02EE")
@@ -131,9 +131,9 @@ ThermalZone (PMI2)
     }
 }
 
-
-
-
+//
+// Qualcomm ADC Temperature Monitor Device 7 (SKIN_THERM)
+//
 ThermalZone (AUX)
 {
     Name (_HID, "QCOM029F")

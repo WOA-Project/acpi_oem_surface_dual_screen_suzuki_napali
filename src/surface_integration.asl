@@ -1,6 +1,6 @@
-
-
-
+//
+// Surface Integration
+//
 Device (WSID)
 {
     Name (_HID, "MSHW0107")

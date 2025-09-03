@@ -1,6 +1,6 @@
-
-
-
+//
+// Biometric Sensor Device - SPI
+//
 Device (FPS1)
 {
     Name (_HID, "MSHW0133")

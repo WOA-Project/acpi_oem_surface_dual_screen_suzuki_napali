@@ -1,6 +1,6 @@
-
-
-
+//
+// Surface Sar Manager
+//
 Device (SARP)
 {
     Name (_HID, "MSHW0131")

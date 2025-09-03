@@ -1,6 +1,6 @@
-
-
-
+//
+// Gemalto eSIM Firmware Update
+//
 Device (GMLT)
 {
     Name (_HID, "GEM7001")

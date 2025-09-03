@@ -1,6 +1,6 @@
-
-
-
+//
+// Surface NFC Wireless Charging
+//
 Device (WLCN)
 {
     Name (_UID, 0)
@@ -8,19 +8,19 @@ Device (WLCN)
     {
         If (TEV4())
         {
-
+            // Surface NFC Wireless Charging EV4
             Return ("MSHW0163")
         }
         Else
         {
-
+            // Surface NFC Wireless Charging EV3
             Return ("MSHW0161")
         }
     }
 
     Method (_STA)
     {
-
+        // EV1 does not have wireless charging, disable the device
         If (TEV1())
         {
             Return (0x0)
@@ -42,18 +42,18 @@ Device (WLCN)
         Return (RBUF)
     }
 
+    // PEP Proxy Support
+    Name(PGID, Buffer(10) {"\\_SB.WLCN"})       // Device ID buffer - PGID (Pep given ID)
 
-    Name(PGID, Buffer(10) {"\\_SB.WLCN"})
+    Name(DBUF, Buffer(DBFL) {})                 // Device ID buffer - PGID (Pep given ID)
+    CreateByteField(DBUF, 0x0, STAT)            // STATUS 1 BYTE
+                                                // HIDDEN 1 BYTE (SIZE)
+    CreateByteField(DBUF, 2, DVAL)              // Packet value, 1 BYTES Device Status
+    CreateField(DBUF, 24, 160, DEID)            // Device ID, 20 BYTES (160 Bits)
 
-    Name(DBUF, Buffer(DBFL) {})
-    CreateByteField(DBUF, 0x0, STAT)
-
-    CreateByteField(DBUF, 2, DVAL)
-    CreateField(DBUF, 24, 160, DEID)
-
-    Method (_S1D, 0) { Return (3) }
-    Method (_S2D, 0) { Return (3) }
-    Method (_S3D, 0) { Return (3) }
+    Method (_S1D, 0) { Return (3) }             // S1 => D3
+    Method (_S2D, 0) { Return (3) }             // S2 => D3
+    Method (_S3D, 0) { Return (3) }             // S3 => D3
 
     Method (_PS0, 0x0, NotSerialized)
     {

@@ -1,6 +1,6 @@
-
-
-
+//
+// Microsoft Thermal Proxy
+//
 Device (TPXY)
 {
     Name (_HID, "MSFTTPXY")
@@ -8,8 +8,8 @@ Device (TPXY)
     Name (_UID, 0)
     Name (_DEP, Package ()
     {
-        \_SB.SEN2,
-        \_SB.SEN3,
+        \_SB.SEN2, 
+        \_SB.SEN3, 
         \_SB.PMBM
     })
 
@@ -35,13 +35,13 @@ Device (TPXY)
         GpioIo(Shared, PullUp, 500, 0, IoRestrictionInputOnly, "\\_SB.GIO0", 0, ResourceConsumer, , ){126}
     })
 
-
-
-
-
-
-
-
+    // _DSM - Device-Specific Method
+    //
+    // Arg0: UUID Unique function identifier
+    // Arg1: Integer Revision ID – Will be 0
+    // Arg2: Integer Function Index (0 = Return Supported Functions)
+    // Arg3: Package Parameters
+    //
     Function(_DSM,{BuffObj, IntObj},{BuffObj, IntObj, IntObj, PkgObj}){
         If ((Arg0 == ToUUID("60e802c9-29f4-479a-bd42-fa5cacc0a385")))
         {
@@ -58,14 +58,14 @@ Device (TPXY)
                 {
                     Name (PBUF, Package(0x2D)
                     {
-                        "TXY0",
-                        0,
-                        0,
-                        "BAT0",
-                        1,
-                        1,
-                        "VTS0",
-                        2,
+                        "TXY0", 
+                        0, 
+                        0, 
+                        "BAT0", 
+                        1, 
+                        1, 
+                        "VTS0", 
+                        2, 
                         2,
                     })
                     Return (PBUF)
@@ -88,19 +88,19 @@ Device (TPXY)
                 {
                     Name (VBUF, Package()
                     {
-                        3063,
-                        31,
-                        30,
-                        42,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        3,
-                        3,
+                        3063, 
+                        31, 
+                        30, 
+                        42, 
+                        0, 
+                        0, 
+                        0, 
+                        0, 
+                        0, 
+                        0, 
+                        0, 
+                        3, 
+                        3, 
                         3,
                     })
                     Return (VBUF)
@@ -112,9 +112,9 @@ Device (TPXY)
                 {
                     Name (RBUF, Package()
                     {
-                        50,
-                        1,
-                        25,
+                        50, 
+                        1, 
+                        25, 
                         10
                     })
                     Return (RBUF)

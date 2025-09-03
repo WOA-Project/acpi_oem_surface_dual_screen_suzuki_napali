@@ -1,6 +1,6 @@
-
-
-
+//
+// LID Hall Effect Sensor
+//
 Device (LID0)
 {
     Name (_HID, EisaId ("PNP0C0D"))

@@ -1,8 +1,8 @@
 Scope (\_SB)
 {
-
-
-
+    //
+    // Thermal Zone for Battery Miniclass Thermal Proxy (Angle)
+    //
     ThermalZone (ATP0)
     {
         Name (_TSN, "\\_SB.TPXY.ANG0")
@@ -28,9 +28,9 @@ Scope (\_SB)
     }
 }
 
-
-
-
+//
+// Thermal Zone for PEP (Rsoc)
+//
 ThermalZone (BTP0)
 {
     Name (_TSN, "\\_SB.TPXY.RSC0")
@@ -59,9 +59,9 @@ ThermalZone (BTP0)
     }
 }
 
-
-
-
+//
+// Thermal Zone for GPU (Rsoc)
+//
 ThermalZone (BTG0)
 {
     Name (_TSN, "\\_SB.TPXY.RSC0")
@@ -90,9 +90,9 @@ ThermalZone (BTG0)
     }
 }
 
-
-
-
+//
+// Thermal Zone for USB Type-C/PD Switch (Rsoc)
+//
 ThermalZone (BTU0)
 {
     Name (_TSN, "\\_SB.TPXY.RSC0")
@@ -121,9 +121,9 @@ ThermalZone (BTU0)
     }
 }
 
-
-
-
+//
+// Thermal Zone for USB Type-C/PD Switch (Rsoc)
+//
 ThermalZone (BTU1)
 {
     Name (_TSN, "\\_SB.TPXY.RSC0")
@@ -152,9 +152,9 @@ ThermalZone (BTU1)
     }
 }
 
-
-
-
+//
+// Thermal Zone for Camera AVStream Mini Driver (Rsoc)
+//
 ThermalZone (BTC0)
 {
     Name (_TSN, "\\_SB.TPXY.RSC0")
@@ -183,9 +183,9 @@ ThermalZone (BTC0)
     }
 }
 
-
-
-
+//
+// Thermal Zone for Camera AVStream Mini Driver (Rsoc)
+//
 ThermalZone (BTC1)
 {
     Name (_TSN, "\\_SB.TPXY.RSC0")
@@ -214,9 +214,9 @@ ThermalZone (BTC1)
     }
 }
 
-
-
-
+//
+// Thermal Zone for Surface Display Panel (Rsoc)
+//
 ThermalZone (BTD0)
 {
     Name (_TSN, "\\_SB.TPXY.RSC0")
@@ -245,9 +245,9 @@ ThermalZone (BTD0)
     }
 }
 
-
-
-
+//
+// Thermal Zone for Surface Display Panel (Rsoc)
+//
 ThermalZone (BTD1)
 {
     Name (_TSN, "\\_SB.TPXY.RSC0")
@@ -276,9 +276,9 @@ ThermalZone (BTD1)
     }
 }
 
-
-
-
+//
+// Thermal Zone for PEP (Vtemp)
+//
 ThermalZone (VMX5)
 {
     Name (_TSN, "\\_SB.TPXY.VTS0")
@@ -307,9 +307,9 @@ ThermalZone (VMX5)
     }
 }
 
-
-
-
+//
+// Thermal Zone for Big CPUs (Vtemp)
+//
 ThermalZone (VMX6)
 {
     Name (_TSN, "\\_SB.TPXY.VTS0")
@@ -318,9 +318,9 @@ ThermalZone (VMX6)
 
     Name (_TZD, Package (0x04)
     {
-        \_SB.SYSM.CLUS.CPU4,
-        \_SB.SYSM.CLUS.CPU5,
-        \_SB.SYSM.CLUS.CPU6,
+        \_SB.SYSM.CLUS.CPU4, 
+        \_SB.SYSM.CLUS.CPU5, 
+        \_SB.SYSM.CLUS.CPU6, 
         \_SB.SYSM.CLUS.CPU7
     })
 
@@ -341,9 +341,9 @@ ThermalZone (VMX6)
     }
 }
 
-
-
-
+//
+// Thermal Zone for Little CPUs (Vtemp)
+//
 ThermalZone (VMX7)
 {
     Name (_TSN, "\\_SB.TPXY.VTS0")
@@ -352,9 +352,9 @@ ThermalZone (VMX7)
 
     Name (_TZD, Package (0x04)
     {
-        \_SB.SYSM.CLUS.CPU0,
-        \_SB.SYSM.CLUS.CPU1,
-        \_SB.SYSM.CLUS.CPU2,
+        \_SB.SYSM.CLUS.CPU0, 
+        \_SB.SYSM.CLUS.CPU1, 
+        \_SB.SYSM.CLUS.CPU2, 
         \_SB.SYSM.CLUS.CPU3
     })
 
@@ -375,9 +375,9 @@ ThermalZone (VMX7)
     }
 }
 
-
-
-
+//
+// Thermal Zone for GPU (Vtemp)
+//
 ThermalZone (VMX8)
 {
     Name (_TSN, "\\_SB.TPXY.VTS0")
@@ -406,9 +406,9 @@ ThermalZone (VMX8)
     }
 }
 
-
-
-
+//
+// Thermal Zone for Battery Miniclass (Vtemp)
+//
 ThermalZone (VMX9)
 {
     Name (_TSN, "\\_SB.TPXY.VTS0")
@@ -437,9 +437,9 @@ ThermalZone (VMX9)
     }
 }
 
-
-
-
+//
+// Thermal Zone for Surface NFC Wireless Charging (Rsoc)
+//
 ThermalZone (WTU1)
 {
     Name (_TSN, "\\_SB.TPXY.RSC0")
@@ -468,9 +468,9 @@ ThermalZone (WTU1)
     }
 }
 
-
-
-
+//
+// Thermal Zone for Surface NFC Wireless Charging (Rsoc)
+//
 ThermalZone (WTU0)
 {
     Name (_TSN, "\\_SB.TPXY.RSC0")

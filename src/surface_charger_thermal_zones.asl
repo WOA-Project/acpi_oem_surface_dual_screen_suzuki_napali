@@ -1,6 +1,6 @@
-
-
-
+//
+// Temperature Sensor Interface for SMB1380
+//
 Scope (\_SB.IC11)
 {
     Name (SMBC, ResourceTemplate ()
@@ -12,17 +12,17 @@ Scope (\_SB.IC11)
 
     Field (SMBO, BufferAcc, NoLock, Preserve)
     {
-        Connection (SMBC),
-        AccessAs (BufferAcc, AttribWord),
-        Offset (0x236),
+        Connection (SMBC), 
+        AccessAs (BufferAcc, AttribWord), 
+        Offset (0x236), 
         TMP3,   16
     }
 
     Field (SMBO, BufferAcc, NoLock, Preserve)
     {
-        Connection (SMBC),
-        AccessAs (BufferAcc, AttribWord),
-        Offset (0x436),
+        Connection (SMBC), 
+        AccessAs (BufferAcc, AttribWord), 
+        Offset (0x436), 
         TMP4,   16
     }
 }
@@ -64,8 +64,8 @@ Scope (\_SB)
             }
             Else
             {
-                Local0 *= 10
-                Local0 += 2732
+                Local0 *= 10   // Convert from kelvin to decikelvin
+                Local0 += 2732 // 273.2C = 0K - Convert from Kelvin to Celsius
             }
         }
         Else
@@ -81,11 +81,11 @@ Scope (\_SB)
             }
             Else
             {
-                Local0 *= 10
-                Local0 += 2732
+                Local0 *= 10   // Convert from kelvin to decikelvin
+                Local0 += 2732 // 273.2C = 0K - Convert from Kelvin to Celsius
             }
         }
-        Return (Local0)
+        Return (Local0) // Return temperature in deci C
     }
 
     Method (ATOK, 1, NotSerialized)
@@ -96,23 +96,23 @@ Scope (\_SB)
         }
         ElseIf ((Arg0 >= 964))
         {
-            Local0 = ~29
-            Local1 = ~19
-            Local2 = XCOM (Local0, Local1, Arg0, 964)
-            Local3 = YCOM (989, 964)
-            Local3 = TCOM (Local2, Local3, Local1)
+            Local0 = ~29                              // -29C
+            Local1 = ~19                              // -19C
+            Local2 = XCOM (Local0, Local1, Arg0, 964) // Temperature in Kelvin
+            Local3 = YCOM (989, 964)                  // Modulus in Kelvin (T1 - T2), Maximum Tolerance
+            Local3 = TCOM (Local2, Local3, Local1)    // Temperature in deci C
         }
         ElseIf ((Arg0 >= 927))
         {
-            Local0 = ~19
-            Local1 = ~9
+            Local0 = ~19                              // -19C
+            Local1 = ~9                               // -9C
             Local2 = XCOM (Local0, Local1, Arg0, 927)
             Local3 = YCOM (964, 927)
             Local3 = TCOM (Local2, Local3, Local1)
         }
         ElseIf ((Arg0 >= 876))
         {
-            Local1 = ~9
+            Local1 = ~9                               // -9C
             Local2 = XCOM (Local1, 0, Arg0, 876)
             Local3 = YCOM (927, 876)
             Local3 = TCOM (Local2, Local3, 0)
@@ -191,15 +191,15 @@ Scope (\_SB)
         }
         Else
         {
-            Local3 = 2732
+            Local3 = 2732 // 0 deci C
         }
 
         Return (Local3)
     }
 
-
-
-
+    //
+    // Thermal Zone for Charger (AUX_THERM)
+    //
     ThermalZone (SMBA)
     {
         Name (_DEP, Package ()
@@ -237,9 +237,9 @@ Scope (\_SB)
         }
     }
 
-
-
-
+    //
+    // Thermal Zone for Charger (BATT_THERM)
+    //
     ThermalZone (SMBI)
     {
         Name (_DEP, Package ()
