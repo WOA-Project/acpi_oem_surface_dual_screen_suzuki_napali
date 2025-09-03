@@ -75,7 +75,7 @@ Name (PCF2, Buffer() {"<?xml version='1.0' encoding='utf-8'?>
   <Group id='Display Interface'>
       <InterfaceType>9</InterfaceType>
       <InterfaceColorFormat>3</InterfaceColorFormat>
-      <DisplayRecoveryThreshold>0x3C</DisplayRecoveryThreshold>
+      <DisplayRecoveryThreshold>0x3C</DisplayRecoveryThreshold> 
   </Group>
   <Group id='DSI Interface'>
       <DSIChannelId>2</DSIChannelId>
@@ -99,16 +99,16 @@ Name (PCF2, Buffer() {"<?xml version='1.0' encoding='utf-8'?>
       <DSIDSCProfileID>6</DSIDSCProfileID>
       <DSIDSCSliceWidth>675</DSIDSCSliceWidth>
       <DSIDSCSliceHeight>18</DSIDSCSliceHeight>
-      <DSIDSCMajorVersion>1</DSIDSCMajorVersion>
-      <DSIDSCMinorVersion>1</DSIDSCMinorVersion>
-      <DSIDSCScrVersion>0</DSIDSCScrVersion>
+      <DSIDSCMajorVersion>1</DSIDSCMajorVersion>  
+      <DSIDSCMinorVersion>1</DSIDSCMinorVersion>  
+      <DSIDSCScrVersion>0</DSIDSCScrVersion> 
       <DSITECheckEnable>False</DSITECheckEnable>
-      <DSITEUsingDedicatedTEPin>True</DSITEUsingDedicatedTEPin>
-      <DSITEvSyncStartPos>2</DSITEvSyncStartPos>
-      <DSITEvSyncContinueLines>4000</DSITEvSyncContinueLines>
+      <DSITEUsingDedicatedTEPin>True</DSITEUsingDedicatedTEPin> 
+      <DSITEvSyncStartPos>2</DSITEvSyncStartPos> 
+      <DSITEvSyncContinueLines>4000</DSITEvSyncContinueLines> 
       <DSITEvSyncStartLineDivisor>4</DSITEvSyncStartLineDivisor>
       <DSITEPercentVariance>0xa0000</DSITEPercentVariance>
-      <DSITEvSyncSelect>1</DSITEvSyncSelect>
+      <DSITEvSyncSelect>1</DSITEvSyncSelect> 
       <DSIFlags>4</DSIFlags>
       <DSIEscapeClockFrequency>6000000</DSIEscapeClockFrequency>
    </Group>
